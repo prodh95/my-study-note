@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="我的大學學習筆記。" />
+    <title>學習專區｜我的學習筆記</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="回到首頁">學習日常</a>
+      <nav aria-label="主要導覽">
+        <a href="./">關於我</a>
+        <a href="./notes.html" aria-current="page">學習專區</a>
+      </nav>
+    </header>
+
+    <main class="notes-page">
+      <section class="notes-hero" aria-labelledby="notes-title">
+        <a class="back-link" href="./">← 回到首頁</a>
+        <p class="eyebrow">LEARNING LIBRARY</p>
+        <h1 id="notes-title">學習專區</h1>
+        <p>整理大學課堂的筆記與複習內容。點擊卡片即可開啟 PDF 閱讀。</p>
+      </section>
+
+      <section class="notes-section" aria-labelledby="library-title">
+        <div class="year-heading">
+          <p class="year-tag">MY FILES</p>
+          <h2 id="library-title">筆記目錄</h2>
+        </div>
+        <div class="notes-directory" id="notes-directory"></div>
+      </section>
+
+      <section class="add-note-tip" id="local-update-tip" aria-labelledby="tip-title">
+        <div class="tip-icon" aria-hidden="true">＋</div>
+        <div>
+          <p class="eyebrow">HOW TO UPDATE</p>
+          <h2 id="tip-title">日後如何新增一份筆記？</h2>
+          <p>把四個學期資料夾放進 <code>public/notes</code>，重新啟動網站或執行發布，筆記就會自動出現。</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Made with care · <span id="year"></span></p>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

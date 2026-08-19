@@ -1,0 +1,74 @@
+:root {
+  --ink: #26342e;
+  --muted: #64756b;
+  --cream: #f8f6f0;
+  --paper: #fffefa;
+  --sage: #dce8dc;
+  --sage-dark: #4a6755;
+  --peach: #f5e6d6;
+  --line: #dfe5dc;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+a { color: inherit; text-decoration: none; }
+
+.site-header, main, footer { width: min(1120px, calc(100% - 48px)); margin: 0 auto; }
+.site-header { height: 82px; display: flex; justify-content: space-between; align-items: center; }
+.brand { font-family: 'Noto Serif TC', serif; font-weight: 700; font-size: 1.18rem; letter-spacing: .08em; }
+nav { display: flex; gap: 28px; font-size: .9rem; }
+nav a { color: var(--muted); transition: color .2s ease; }
+nav a:hover, nav a[aria-current='page'] { color: var(--sage-dark); }
+
+.hero { display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 70px; min-height: 570px; padding: 55px 6% 85px; }
+.eyebrow, .year-tag { color: var(--sage-dark); font-size: .72rem; letter-spacing: .16em; font-weight: 700; margin: 0 0 14px; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3 { font-family: 'Noto Serif TC', serif; }
+.hero h1 { font-size: clamp(2.25rem, 4.1vw, 3.65rem); line-height: 1.38; letter-spacing: .02em; margin-bottom: 24px; }
+.hero-description { max-width: 490px; color: var(--muted); line-height: 1.9; font-size: 1rem; margin-bottom: 34px; }
+.button { display: inline-flex; gap: 18px; align-items: center; padding: 13px 19px; border-radius: 2px; font-weight: 600; font-size: .92rem; transition: transform .2s ease, background .2s ease; }
+.button-primary { color: #fff; background: var(--sage-dark); }
+.button:hover { transform: translateY(-2px); background: #3c5747; }
+
+.hero-art { position: relative; width: min(100%, 395px); height: 340px; justify-self: center; }
+.paper { position: absolute; border-radius: 4px; box-shadow: 0 17px 38px #33413422; }
+.paper-back { width: 244px; height: 300px; background: var(--peach); transform: rotate(8deg); top: 13px; right: 42px; }
+.paper-front { width: 248px; height: 306px; padding: 35px 27px; background: var(--paper); transform: rotate(-5deg); top: 2px; right: 88px; }
+.paper-label { color: var(--sage-dark); font-size: .7rem; font-weight: 700; letter-spacing: .16em; }
+.paper-line { position: absolute; left: 27px; height: 8px; background: var(--sage); border-radius: 10px; }
+.line-one { width: 140px; top: 93px; }.line-two { width: 184px; top: 123px; }.line-three { width: 112px; top: 153px; }
+.paper-doodle { position: absolute; font-size: 3rem; color: #e7b883; right: 32px; bottom: 31px; }
+.leaf { position: absolute; width: 52px; height: 115px; border-radius: 100% 0 100% 0; background: #a8bd9c; transform: rotate(-23deg); }
+.leaf-one { bottom: 8px; right: 5px; }.leaf-two { width: 36px; height: 83px; background: #c6d6b7; bottom: 63px; right: 2px; transform: rotate(25deg); }
+
+.section { padding: 95px 6%; }
+.about { text-align: center; border-top: 1px solid var(--line); }
+.about h2 { font-size: clamp(1.7rem, 3vw, 2.35rem); margin-bottom: 22px; }.about h2 span { color: var(--sage-dark); }
+.about > p:last-child { max-width: 640px; margin: 0 auto; line-height: 2; color: var(--muted); }
+.areas { padding-top: 74px; }
+.section-heading { display: flex; align-items: end; justify-content: space-between; margin-bottom: 28px; gap: 25px; }
+.section-heading h2, .year-heading h2 { font-size: 2rem; margin: 0; }.section-heading > p { color: var(--muted); font-size: .92rem; margin: 0 0 4px; }
+.area-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.area-card { min-height: 295px; padding: 31px; border: 1px solid var(--line); position: relative; transition: transform .2s ease, box-shadow .2s ease; }
+.area-card-active { background: var(--sage); }.area-card-active:hover { transform: translateY(-4px); box-shadow: 0 15px 30px #57695721; }.area-card-soon { background: var(--paper); }
+.card-number { position: absolute; top: 28px; right: 30px; color: #829487; font-size: .75rem; }.area-icon { font-size: 2rem; color: var(--sage-dark); margin: 8px 0 36px; }
+.area-card h3 { font-size: 1.55rem; margin-bottom: 10px; }.area-card p { color: var(--muted); line-height: 1.75; font-size: .91rem; max-width: 290px; }
+.card-link, .coming-soon { position: absolute; bottom: 29px; font-size: .86rem; font-weight: 700; }.card-link b { margin-left: 8px; }.coming-soon { color: #9da9a1; font-weight: 500; }
+
+.notes-page { padding-bottom: 90px; }.notes-hero { padding: 64px 6% 52px; border-bottom: 1px solid var(--line); }.back-link { display: inline-block; color: var(--muted); font-size: .85rem; margin-bottom: 50px; }.back-link:hover { color: var(--sage-dark); }
+.notes-hero h1 { font-size: clamp(2.25rem, 4vw, 3.3rem); margin-bottom: 15px; }.notes-hero > p:last-child { color: var(--muted); line-height: 1.8; margin-bottom: 0; }
+.notes-section { padding: 54px 6% 0; }.year-heading { display: flex; align-items: baseline; gap: 16px; margin-bottom: 21px; }.year-heading .year-tag { margin: 0; }.year-heading h2 { font-size: 1.65rem; }
+.notes-directory { display: grid; gap: 13px; }.semester-folder, .course-folder { background: var(--paper); border: 1px solid var(--line); }.semester-folder > summary, .course-folder > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 13px; }.semester-folder > summary::-webkit-details-marker, .course-folder > summary::-webkit-details-marker { display: none; }
+.public-library-notice { padding: 42px 34px; background: var(--paper); border: 1px solid var(--line); text-align: center; }.public-library-notice .eyebrow { margin-bottom: 10px; }.public-library-notice h3 { font-size: 1.45rem; margin-bottom: 12px; }.public-library-notice p:last-child { max-width: 520px; margin: 0 auto; color: var(--muted); line-height: 1.9; font-size: .9rem; }
+.semester-folder > summary { padding: 23px 25px; font-family: 'Noto Serif TC', serif; font-size: 1.38rem; }.semester-folder > summary::before, .course-folder > summary::before { content: '＋'; color: var(--sage-dark); font-family: 'Noto Sans TC', sans-serif; font-size: 1rem; line-height: 1; }.semester-folder[open] > summary::before, .course-folder[open] > summary::before { content: '−'; }
+.semester-folder > summary small, .course-folder > summary small { margin-left: auto; color: var(--muted); font-family: 'Noto Sans TC', sans-serif; font-size: .78rem; font-weight: 400; }.course-list { padding: 0 18px 18px; border-top: 1px solid var(--line); }.course-folder { margin-top: 12px; }.course-folder > summary { padding: 16px 17px; font-size: .97rem; font-weight: 700; }.course-folder > summary::before { font-size: .88rem; }.folder-icon { color: var(--sage-dark); font-size: 1.2rem; transform: rotate(-28deg); }
+.file-list { display: grid; gap: 8px; padding: 0 16px 16px 53px; }.file-link { display: flex; align-items: center; gap: 11px; padding: 12px 14px; background: #f8f8f3; color: var(--ink); font-size: .88rem; transition: background .18s ease, color .18s ease; }.file-link:hover { background: var(--sage); color: var(--sage-dark); }.file-icon { flex: 0 0 auto; color: #a86452; font-size: .61rem; font-weight: 700; letter-spacing: .03em; }.file-open { margin-left: auto; color: var(--sage-dark); }.empty-notes { margin: 0; padding: 20px 25px; color: var(--muted); line-height: 1.8; }
+.add-note-tip { display: flex; gap: 23px; align-items: flex-start; margin: 64px 6% 0; padding: 26px; background: #eee9df; }.tip-icon { width: 37px; height: 37px; flex: 0 0 37px; display: grid; place-items: center; background: var(--sage-dark); color: white; border-radius: 50%; font-size: 1.3rem; }.add-note-tip .eyebrow { margin-bottom: 8px; }.add-note-tip h2 { font-size: 1.25rem; margin-bottom: 8px; }.add-note-tip p { color: var(--muted); font-size: .87rem; line-height: 1.8; margin-bottom: 0; }.add-note-tip code { color: var(--ink); font-family: Consolas, monospace; font-size: .8rem; }
+footer { border-top: 1px solid var(--line); padding: 28px 0; text-align: center; color: var(--muted); font-size: .77rem; }
+
+@media (max-width: 700px) { .site-header, main, footer { width: min(100% - 32px, 1120px); }.site-header { height: 68px; }.hero { grid-template-columns: 1fr; gap: 20px; padding: 54px 4% 65px; text-align: center; }.hero-description { margin-inline: auto; }.hero-art { transform: scale(.82); height: 275px; margin-top: -8px; }.section { padding: 68px 4%; }.section-heading { display: block; }.section-heading > p { margin-top: 13px; }.area-grid { grid-template-columns: 1fr; }.area-card { min-height: 260px; }.notes-hero { padding: 45px 4% 39px; }.back-link { margin-bottom: 38px; }.notes-section { padding: 44px 4% 0; }.semester-folder > summary { padding: 19px; font-size: 1.18rem; gap: 9px; }.semester-folder > summary small { font-size: .68rem; }.course-list { padding: 0 10px 10px; }.course-folder > summary { padding: 15px 12px; gap: 8px; }.course-folder > summary small { font-size: .68rem; }.file-list { padding: 0 10px 10px 35px; }.file-link { padding: 11px; font-size: .8rem; }.add-note-tip { margin: 48px 4% 0; padding: 21px; }.add-note-tip h2 { font-size: 1.12rem; } }
+@media (max-width: 390px) { nav { gap: 15px; font-size: .82rem; }.brand { font-size: 1rem; }.hero h1 { font-size: 2rem; }.hero-art { transform: scale(.7); margin: -30px 0 -35px; } }
